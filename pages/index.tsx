@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import FooterComponent from "../components/common/footer/footer";
 import HeaderComponent from "../components/common/header/header";
+import Image from "next/image";
+import test from "../public/test.jpg";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +16,16 @@ const Home: NextPage = () => {
 
       <HeaderComponent />
 
-      <main className="p-10">Startseite</main>
+      <main className="p-10">
+        <Image
+          objectFit="cover"
+          alt="Vercel logo"
+          placeholder="blur"
+          src={test}
+          width={1000}
+          height={1000}
+        />
+      </main>
 
       <FooterComponent />
     </div>
